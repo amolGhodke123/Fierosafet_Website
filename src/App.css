@@ -1,16 +1,28 @@
+@import '~font-awesome/css/font-awesome.min.css';
+
 .custom-footer-bg {
     background-color: #FA4300; /* background color */
-    height:7vh;
+    height: 7vh;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .custom-footer-bg1 {
     background-color: #FFFFFF; /* background color */
     height: 20vh;
+
 }
 .custom-footer-bg2 {
     background-color: #9C9CA6; /* background color */
     height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; /* Align text in the center */
+    color: white;
+    display: flex;
 }
+
 .compressed-image {
     width: auto; /* Set the width to 100% to ensure it fills the parent container */
     height: auto; /* Maintain the aspect ratio */
@@ -18,3 +30,179 @@
     max-height: 100%; /* Limit the maximum height to 100% of its parent container */
     margin-left: 3vw;
 }
+
+/* CSS for Font Awesome icons */
+.custom-footer-bg i.fa {
+    font-size: 1em; /* Change the font size to make the icons bigger */
+    margin: 0 10px; /* Add margin between the icons for spacing */
+}
+.centered-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    float: right;
+    margin-right: 8vw;
+}
+    .centered-content a,
+    .centered-content i.fa {
+        color: white; /* Color for links and icons */
+        text-decoration: none;
+        
+        transition: color 0.3s; /* Smooth transition for color change */
+    }
+        .centered-content a:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .centered-content {
+        flex-direction: column;
+    }
+}
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+    .wrapper .icon {
+        position: relative;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 10px;
+        width: 2px;
+        height: 2px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        background: #ffffff;
+        color: #ffffff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+        .wrapper .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #ffffff;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+    .wrapper .icon:hover .tooltip {
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+        background: #1877F2;
+        color: #ffffff;
+    }
+
+    .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+        background: #1DA1F2;
+        color: #ffffff;
+    }
+
+    .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+        background: #E4405F;
+        color: #ffffff;
+    }
+
+    .wrapper .github:hover,
+    .wrapper .github:hover .tooltip,
+    .wrapper .github:hover .tooltip::before {
+        background: #333333;
+        color: #ffffff;
+    }
+
+    .wrapper .youtube:hover,
+    .wrapper .youtube:hover .tooltip,
+    .wrapper .youtube:hover .tooltip::before {
+        background: #CD201F;
+        color: #ffffff;
+    }
+
+    .wrapper .gmail:hover,
+    .wrapper .gmail:hover .tooltip,
+    .wrapper .gmail:hover .tooltip::before {
+        background: #CD201F;
+        color: #ffffff;
+    }
+
+.image-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Customize the shadow properties here */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* CSS to remove bullets and set text color to black */
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .dropdown-content ul li {
+        border-bottom: 1px solid #ccc; /* Add a line between dropdown items */
+    }
+
+        .dropdown-content ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 8px 12px;
+            display: block;
+        }
+
+            .dropdown-content ul li a:before {
+                content: '';
+            }
+
+            .dropdown-content ul li a:hover {
+                background-color: #ddd;
+            }
+
+
