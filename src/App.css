@@ -1,7 +1,7 @@
 @import '~font-awesome/css/font-awesome.min.css';
 
 .custom-footer-bg {
-    background-color: #FA4300; /* background color */
+    background-color: #F51A06; /* background color */
     height: 7vh;
     display: flex;
     justify-content: flex-end;
@@ -9,7 +9,7 @@
 
 .custom-footer-bg1 {
     background-color: #FFFFFF; /* background color */
-    height: 20vh;
+    height: 15vh;
 
 }
 .custom-footer-bg2 {
@@ -23,12 +23,19 @@
     display: flex;
 }
 
+/*.compressed-image {
+    width: 100%;*/ /* Set the width to 100% to ensure it fills the parent container */
+    /*height: auto;*/ /* Maintain the aspect ratio */
+    /*max-width: 100%;*/ /* Limit the maximum width to 100% of its parent container */
+    /*max-height: 100%;*/ /* Limit the maximum height to 100% of its parent container */
+    /*margin-left: 3vw;
+}*/
 .compressed-image {
-    width: auto; /* Set the width to 100% to ensure it fills the parent container */
+    width: 13%; /* Limit the maximum width to 100% of its parent container */
     height: auto; /* Maintain the aspect ratio */
-    max-width: 100%; /* Limit the maximum width to 100% of its parent container */
-    max-height: 100%; /* Limit the maximum height to 100% of its parent container */
-    margin-left: 3vw;
+    max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
+    margin-left: 3vw; /* Adjust the left margin as needed */
+    
 }
 
 /* CSS for Font Awesome icons */
@@ -60,6 +67,20 @@
         flex-direction: column;
     }
 }
+.custom-footer-bg2 .nav-item .nav-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: white !important;
+    margin-right: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
+}
+
+    .custom-footer-bg2 .nav-item .nav-link:hover {
+        color: #FA4300 !important; /* Change color on hover */
+    }
+
+
 .wrapper {
     display: inline-flex;
     list-style: none;
@@ -204,5 +225,101 @@
             .dropdown-content ul li a:hover {
                 background-color: #ddd;
             }
+.float {
+    float: left;
+}
+
+.form-element {
+    margin-bottom: 2px;
+    box-sizing: 20px;
+}
+
+.single-info-col {
+    border: 1px solid #f1f1f1;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.contact-section .single-info .icon-wrapper {
+    border: 1px solid #f4285b;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #fff;
+    float: left;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.contact-section .single-info .info-txt {
+    float: left;
+    width: 73%;
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+element.style {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-name: fadeInRight;
+}
+
+.color {
+    color: purple;
+}
+
+.align {
+    align-items: center;
+}
+
+.para {
+    font-weight: bold;
+}
+.custom-footer {
+    color: #BFCBD1; /* background color */
+    position: relative;
+    z-index: 1; /* higher z-index value */
+    height: 350px;
+    margin-left: 25px;
+}
+
+.custom-footer-bg3 {
+    background-color: #002147; /* background color */
+    position: relative;
+    z-index: 0; /* lower z-index value */
+}
+
+.copyright-notice {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact-info {
+    width: 45%; /* Adjust the width as needed */
+    float: left; /* Float the contact info divs to display them side by side */
+    margin-right: 5%; /* Add a margin between the contact info divs */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
