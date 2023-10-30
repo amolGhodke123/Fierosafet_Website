@@ -1,3 +1,65 @@
+.float{
+    float:left;
+}
+
+.form-element {
+    margin-bottom: 2px;
+    box-sizing: 20px;
+}
+
+.single-info-col {
+    border: 1px solid #f1f1f1;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.contact-section .single-info .icon-wrapper {
+    border: 1px solid #f4285b;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #fff;
+    float: left;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
+.contact-section .single-info .info-txt {
+    float: left;
+    width: 73%;
+}
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+element.style {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-name: fadeInRight;
+}
+.color{
+    color:purple;
+}
+.align{
+    align-items:center;
+}
+.para{
+    font-weight:bold;
+}
+
+
+
+
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +98,4 @@
     transform: rotate(360deg);
   }
 }
+

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\Components",
+    "\\src\\Components\\Home",
+    "\\src\\Components\\Home\\Contact"
   ],
-  "SelectedNode": "\\D:\\New folder Live",
+  "SelectedNode": "\\src\\App.css",
   "PreviewInSolutionExplorer": false
 }
