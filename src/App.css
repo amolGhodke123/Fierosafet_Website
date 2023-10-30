@@ -1,38 +1,325 @@
-.App {
-  text-align: center;
+@import '~font-awesome/css/font-awesome.min.css';
+
+.custom-footer-bg {
+    background-color: #F51A06; /* background color */
+    height: 7vh;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-footer-bg1 {
+    background-color: #FFFFFF; /* background color */
+    height: 15vh;
+
+}
+.custom-footer-bg2 {
+    background-color: #9C9CA6; /* background color */
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; /* Align text in the center */
+    color: white;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*.compressed-image {
+    width: 100%;*/ /* Set the width to 100% to ensure it fills the parent container */
+    /*height: auto;*/ /* Maintain the aspect ratio */
+    /*max-width: 100%;*/ /* Limit the maximum width to 100% of its parent container */
+    /*max-height: 100%;*/ /* Limit the maximum height to 100% of its parent container */
+    /*margin-left: 3vw;
+}*/
+.compressed-image {
+    width: 13%; /* Limit the maximum width to 100% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
+    margin-left: 3vw; /* Adjust the left margin as needed */
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* CSS for Font Awesome icons */
+.custom-footer-bg i.fa {
+    font-size: 1em; /* Change the font size to make the icons bigger */
+    margin: 0 10px; /* Add margin between the icons for spacing */
+}
+.centered-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    float: right;
+    margin-right: 8vw;
+}
+    .centered-content a,
+    .centered-content i.fa {
+        color: white; /* Color for links and icons */
+        text-decoration: none;
+        
+        transition: color 0.3s; /* Smooth transition for color change */
+    }
+        .centered-content a:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .centered-content {
+        flex-direction: column;
+    }
+}
+.custom-footer-bg2 .nav-item .nav-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: white !important;
+    margin-right: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add transition for smooth color change */
 }
 
-.App-link {
-  color: #61dafb;
+    .custom-footer-bg2 .nav-item .nav-link:hover {
+        color: #FA4300 !important; /* Change color on hover */
+    }
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .wrapper .icon {
+        position: relative;
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 10px;
+        width: 2px;
+        height: 2px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        background: #ffffff;
+        color: #ffffff;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+        .wrapper .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #ffffff;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+    .wrapper .icon:hover .tooltip {
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+        background: #1877F2;
+        color: #ffffff;
+    }
+
+    .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+        background: #1DA1F2;
+        color: #ffffff;
+    }
+
+    .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+        background: #E4405F;
+        color: #ffffff;
+    }
+
+    .wrapper .github:hover,
+    .wrapper .github:hover .tooltip,
+    .wrapper .github:hover .tooltip::before {
+        background: #333333;
+        color: #ffffff;
+    }
+
+    .wrapper .youtube:hover,
+    .wrapper .youtube:hover .tooltip,
+    .wrapper .youtube:hover .tooltip::before {
+        background: #CD201F;
+        color: #ffffff;
+    }
+
+    .wrapper .gmail:hover,
+    .wrapper .gmail:hover .tooltip,
+    .wrapper .gmail:hover .tooltip::before {
+        background: #CD201F;
+        color: #ffffff;
+    }
+
+.image-shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Customize the shadow properties here */
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* CSS to remove bullets and set text color to black */
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .dropdown-content ul li {
+        border-bottom: 1px solid #ccc; /* Add a line between dropdown items */
+    }
+
+        .dropdown-content ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 8px 12px;
+            display: block;
+        }
+
+            .dropdown-content ul li a:before {
+                content: '';
+            }
+
+            .dropdown-content ul li a:hover {
+                background-color: #ddd;
+            }
+.float {
+    float: left;
+}
+
+.form-element {
+    margin-bottom: 2px;
+    box-sizing: 20px;
+}
+
+.single-info-col {
+    border: 1px solid #f1f1f1;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.contact-section .single-info .icon-wrapper {
+    border: 1px solid #f4285b;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #fff;
+    float: left;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.contact-section .single-info .info-txt {
+    float: left;
+    width: 73%;
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+element.style {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-name: fadeInRight;
+}
+
+.color {
+    color: purple;
+}
+
+.align {
+    align-items: center;
+}
+
+.para {
+    font-weight: bold;
+}
+.custom-footer {
+    color: #BFCBD1; /* background color */
+    position: relative;
+    z-index: 1; /* higher z-index value */
+    height: 350px;
+    margin-left: 25px;
+}
+
+.custom-footer-bg3 {
+    background-color: #002147; /* background color */
+    position: relative;
+    z-index: 0; /* lower z-index value */
+}
+
+.copyright-notice {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact-info {
+    width: 45%; /* Adjust the width as needed */
+    float: left; /* Float the contact info divs to display them side by side */
+    margin-right: 5%; /* Add a margin between the contact info divs */
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
