@@ -5,21 +5,11 @@ import ContactForm from './ContactForm';
 
 function Home() {
     const [contact, setContact] = useState(false);
+    const [home, setHome] = useState(true);
+
     return (
         <>
-            {contact ? 
-<div>
-  {/*    <link*/}
-  {/*      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"*/}
-  {/*      rel="stylesheet"*/}
-  {/*    />*/}
-  {/*    <link*/}
-  {/*  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"*/}
-  {/*  rel="stylesheet"*/}
-  {/*/>*/}
-                    <ContactForm />
-    </div>                :
-            <>
+           
                 <div className="custom-footer-bg p-3">
                 <div className="centered-content">
                     <a href="tel:8888401513"> <i className="fa fa-phone"></i> 8888401513 /</a>
@@ -100,6 +90,73 @@ function Home() {
 
             </div>
 
+
+
+
+                    <div>
+                {contact ? <ContactForm /> :
+                <>
+                    { home &&
+
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/images/slider3.jpg" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/slider1.jpg" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/images/slider2.jpg" class="d-block w-100" alt="..." />
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                        }
+
+
+
+                    <div className="col-12 row">
+                        <div className="col-8 row p-4">
+                            <h2 className='color1'>WE ARE FIERO SAFETY PVT.LTD.</h2> <hr  />
+                            <p className="color2">SHIELDON Fire & Safety Pvt. Ltd. is a fire protection company that delivers quality fire protection systems and safety solutions under one roof. We protect lives and property while providing an exceptional value to our customers. we strive to become a full-service, world class fire protection organization.
+                                We have experience with the commercial, industrial or residential marketplaces. At SHIELDON Fire & Safety Pvt. Ltd., we provide a host of fire protection services and fire safety consultancy for all types of buildings to provide your needs as a full service fire protection company.</p>
+                        </div>
+                        <div className="col-4 p-4">
+                            <img src="/brochure front page new.jpg" alt="" className="compressed-image1" />
+                        </div>
+                        </div>
+
+                    </>
+}
+
+            </div>
+
+
                     <div className="custom-footer-bg3 mt-5" >
                 <div className="custom-footer p-3">
                     <div className="contact-info">
@@ -107,7 +164,7 @@ function Home() {
                         <hr />
                         <p style={{ marginTop: '25px' }}>
                                     
-                                    <i className="fa fa-brands fa-house" style={{ marginRight: '10px' }}></i>
+                                    <i className="fa fas fa-home" style={{ marginRight: '10px' }}></i>
                                     
                                     Vidya Vasant Park, Front of Vasantrao Naik B.Ed. College, Kalamba, Kolhapur - 416007
 
@@ -124,7 +181,7 @@ function Home() {
                     </div>
                     <div className="contact-info">
                         <h5>Useful Links</h5>
-                                <hr />
+                                <hr/>
                                 <p><i class="fa fa-solid fa-bars"></i>Home</p>
                                 <p>About Us</p>
                         <p>Contact</p>
@@ -169,7 +226,7 @@ function Home() {
                     </div>
                 </div>
                     </div>
-        </>}
+        
             
         </>
        

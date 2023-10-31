@@ -37,6 +37,12 @@
     margin-left: 3vw; /* Adjust the left margin as needed */
     
 }
+.compressed-image1 {
+    width: 70%; /* Limit the maximum width to 100% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
+    
+}
 
 /* CSS for Font Awesome icons */
 .custom-footer-bg i.fa {
@@ -276,9 +282,57 @@ element.style {
     animation-delay: 0.2s;
     animation-name: fadeInRight;
 }
-
 .color {
-    color: purple;
+    color: #183650;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
+
+}
+.color1 {
+    color: #000000;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
+}
+.color2 {
+    color: #4E5861;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
 }
 
 .align {
@@ -292,7 +346,7 @@ element.style {
     color: #BFCBD1; /* background color */
     position: relative;
     z-index: 1; /* higher z-index value */
-    height: 350px;
+    height: 60vh;
     margin-left: 25px;
 }
 
@@ -320,6 +374,10 @@ element.style {
     content: "";
     display: table;
     clear: both;
+}
+.line {
+    width: 10%; /* Set the width of the line to 20% of its parent container */
+    border: 0.2vw solid #990022; /* Set the border width using viewport units and a darker red color */
 }
 
 
