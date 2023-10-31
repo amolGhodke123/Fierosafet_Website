@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import ContactForm from './ContactForm';
+
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Home() {
@@ -10,16 +11,27 @@ function Home() {
     return (
         <>
            
-                <div className="custom-footer-bg p-3">
-                <div className="centered-content">
+                <div className="custom-footer-bg">
+                <div className="centered-content p-2">
+                <div className="color3">
                     <a href="tel:8888401513"> <i className="fa fa-phone"></i> 8888401513 /</a>
                     <a href="tel:7588489516"> 7588489516 | </a>
                     <a href="mailto:fierosafety@gmail.com"> <i className="fa fa-envelope"></i> fierosafety@gmail.com </a>
+                    </div>
                 </div>
             </div>
-            <div className="custom-footer-bg1">
+            <div className="custom-footer-bg1 mb-4" style={{ display: 'flex', alignItems: 'center' }}>
                 <img src="/finalfs.png" alt="" className="compressed-image" />
-                <div style={{ position: 'absolute', top: 90, right: 20 }}>
+                <div className="color4">
+                    FIERO SAFETY SERVICES PVT.LTD.
+                    <div className="color5">
+                        We keep you safe...!!!
+                    </div>
+                   
+                </div>
+             {/*   <img src="/2.png" alt="" style={{marginLeft:'6vh'} } />*/}
+              
+                <div style={{ position: 'absolute', top: 70, right: 20 }}>
                     <ul className="wrapper">
                         <li className="icon facebook">
                             <span className="tooltip">Facebook</span>
@@ -48,7 +60,7 @@ function Home() {
                     </ul></div>
 
             </div>
-            <div className="custom-footer-bg2 p-3 mt-2">
+            <div className="custom-footer-bg2">
                 <ul className="nav" >
                     <li className="nav-item dropdown">
                         <a className="nav-link active" style={{ color: 'white', marginRight:'40px' }} aria-current="page" href="#">HOME</a>
@@ -157,11 +169,11 @@ function Home() {
             </div>
 
 
-                    <div className="custom-footer-bg3 mt-5" >
+                    <div className="custom-footer-bg3" >
                 <div className="custom-footer p-3">
                     <div className="contact-info">
                         <h5>Contact Info</h5>
-                        <hr />
+                        <hr className="custom-hr" />
                         <p style={{ marginTop: '25px' }}>
                                     
                                     <i className="fa fas fa-home" style={{ marginRight: '10px' }}></i>
@@ -181,7 +193,7 @@ function Home() {
                     </div>
                     <div className="contact-info">
                         <h5>Useful Links</h5>
-                                <hr/>
+                        <hr className="custom-hr" />
                                 <p><i class="fa fa-solid fa-bars"></i>Home</p>
                                 <p>About Us</p>
                         <p>Contact</p>
@@ -189,7 +201,7 @@ function Home() {
 
                     </div>
                     <div className="clearfix"></div>
-                    <hr />
+                    <hr className="custom-hr" />
 
 
                     <div className="copyright-notice">
