@@ -1,22 +1,31 @@
 
 import React, { useState } from 'react';
 import ContactForm from './ContactForm';
+
+//import image from '../../../public/images/image-slider-1.jpg'
+
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Home() {
     const [contact, setContact] = useState(false);
+
+    const [home,setHome]=useState(true);
+
+   
+
     return (
         <>
+        
+<script src="path/to/jquery.min.js"></script>
+
+<link href="path/to/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+<script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
             {contact ? 
 <div>
-  {/*    <link*/}
-  {/*      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"*/}
-  {/*      rel="stylesheet"*/}
-  {/*    />*/}
-  {/*    <link*/}
-  {/*  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"*/}
-  {/*  rel="stylesheet"*/}
-  {/*/>*/}
+      
                     <ContactForm />
     </div>                :
             <>
@@ -99,6 +108,60 @@ function Home() {
 
 
             </div>
+
+
+
+
+            {home &&
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/slider3.jpg" class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/slider1.jpg" class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/images/slider2.jpg" class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        }
+
+
+
+
+
+
+
+
+
 
                     <div className="custom-footer-bg3 mt-5" >
                 <div className="custom-footer p-3">
