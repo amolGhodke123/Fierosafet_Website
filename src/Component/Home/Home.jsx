@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
 import About from './About';
 import Product from './Product';
+import Services from './Services';
 
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -146,22 +147,24 @@ function Home() {
                             <div class="carousel-item active">
                                 <img src="/images/slider3.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>First slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }} >Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire Extinguishers</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="/images/slider1.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Second slide label</h5>
-                                    <p>Some representative placeholder content for the second slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire and safety Equipments</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="/images/slider2.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Third slide label</h5>
-                                    <p>Some representative placeholder content for the third slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire protective system</h5>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +202,10 @@ function Home() {
                 <About />}
 
             {section === "PRODUCTS" &&
-                <Product/>}
+                <Product />}
+
+            {section === "SERVICES" &&
+                <Services />}
 
 
 

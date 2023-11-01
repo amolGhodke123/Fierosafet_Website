@@ -70,7 +70,12 @@
     max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
     
 }
+.compressed-image2 {
+    width: 100%; /* Limit the maximum width to 100% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
 
+}
 /* CSS for Font Awesome icons */
 .custom-footer-bg i.fa {
     font-size: 1em; /* Change the font size to make the icons bigger */
@@ -409,8 +414,8 @@ element.style {
 .colorAbout {
     color: white;
     font-family: "Rubik", sans-serif;
-    font-size: 3vw;
-    font-weight: 400;
+    font-size: 4vw;
+    font-weight: 700;
     font-style: normal;
     font-variant: normal;
     font-kerning: auto;
@@ -462,7 +467,12 @@ element.style {
     white-space: nowrap;
 }
 
-
+.color6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #CC0335;
+}
 
 /* Media query for screens smaller than 768px */
 @media screen and (max-width: 768px) {
