@@ -47,6 +47,7 @@
     text-align: center; /* Align text in the center */
     color: white;
     display: flex;
+
 }
 
 /*.compressed-image {
@@ -368,6 +369,7 @@ element.style {
     text-decoration: none solid rgb(24, 54, 80);
     text-align: left;
     text-indent: 0px;
+    margin-bottom:0px;
 }
 .color2 {
     color: #4E5861;
@@ -385,11 +387,29 @@ element.style {
     text-decoration: none solid rgb(24, 54, 80);
     text-align: left;
     text-indent: 0px;
+    margin-top:0px;
 }
 .color3 {
     color: #4E5861;
     font-family: "Rubik", sans-serif;
     font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+}
+.colorAbout {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 3vw;
     font-weight: 400;
     font-style: normal;
     font-variant: normal;
@@ -502,6 +522,23 @@ element.style {
     width: 100%;
     text-align: center;
     padding: 10px 0;
+    color: #9C9CA6;
+    font-family: "Barlow Condensed",sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+    margin-top: 0px;
+    white-space: nowrap;
 }
 
 .contact-info {
@@ -539,4 +576,30 @@ element.style {
         height: 1px; /* Height of the decorative element */
         background-color: #FFFFE6; /* Color of the decorative element */
         margin-right: 10px; /* Margin between the decorative element and the line */
+    }
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 15vh; /* This will be overridden for the second image below */
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 10vh;
+    right: 10vh;
+    background-color: #25d366;
+    color: #fff;
+    padding: 2vh;
+    border-radius: 50%;
+    font-size: 3vw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    display: flex;
+    
+    
+}
+
+    .whatsapp-icon:hover {
+        background-color: #128c7e;
+        z-index: 1;
     }
