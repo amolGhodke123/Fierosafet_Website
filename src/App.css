@@ -118,16 +118,17 @@
 .custom-footer-bg2 .nav-item .nav-link {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
-    color: white !important;
     margin-right: 40px;
     text-decoration: none;
-    transition: color 0.3s ease; /* Add transition for smooth color change */
+    transition: color 0.2s ease; /* Add transition for smooth color change */
 }
 
     .custom-footer-bg2 .nav-item .nav-link:hover {
         color: #CC0335 !important; /* Change color on hover */
     }
-
+    .custom-footer-bg2 .nav-item .nav-link:active {
+        color: #CC0335 !important; /* Change color on hover */
+    }
 
 .wrapper {
     display: inline-flex;
@@ -613,3 +614,18 @@ element.style {
         background-color: #128c7e;
         z-index: 1;
     }
+
+
+.active1 {
+    background: rgb(177, 177, 177);
+}
+
+.navbar-area nav ul li.active a {
+    color: #f4285b;
+}
+
+/*.active-tab {
+    background-color: #CC0335;*/ /* Change this to the background color you want for the active tab */
+    /*color: #CC0335;*/ /* Change this to the text color you want for the active tab */
+    /* Add any other styles you want to apply to the active tab */
+/*}*/

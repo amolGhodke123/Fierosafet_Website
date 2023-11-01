@@ -14,6 +14,9 @@ function Home() {
     const [contact, setContact] = useState(false);
     const [home, setHome] = useState(true);
     const [section, setSection] = useState('HOME'); // Default section is 'home'
+    const [productName, setProductName] = useState('helmet');
+
+
 
     //useEffect(() => {
     //    // Initialize the carousel when the component mounts
@@ -22,7 +25,12 @@ function Home() {
     //        wrap: true, // Enable carousel wrap (circular sliding)
     //    });
     //}, []);
-   
+
+
+    const setStates = (product) => {
+        setProductName(product);
+        setSection('PRODUCTS');
+    }
 
     return (
         <>
@@ -78,47 +86,50 @@ function Home() {
                     </ul></div>
 
             </div>
+
             <div className="custom-footer-bg2">
                 <ul className="nav" >
-                    <li className="nav-item dropdown">
-                        <a className="nav-link active" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('HOME')} aria-current="page" href="#">HOME</a>
+                    {/*<li className="`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>">*/}
+                        <li className={`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>
+
+                        <a className="nav-link active" style={{ color: section === 'HOME' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('HOME')} aria-current="page" href="#">HOME</a>
+                       
+                    </li>
+                    <li className="nav-item dropdown active">
+                        <a className="nav-link custom-text-color" style={{ color: section === 'ABOUT' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('ABOUT')}>ABOUT US</a>
                        
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link custom-text-color" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('ABOUT')}>ABOUT US</a>
-                       
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('PRODUCTS')}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
+                        <a className="nav-link active" href="#" style={{ color: section === 'PRODUCTS' ? '#CC0335' : 'white', marginRight: '40px' }}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-content">
                             <ul>
-                                <li><a href="#">fire helmet</a></li>
-                                <li><a href="#">Dropdown Item Y</a></li>
-                                <li><a href="#">Dropdown Item Zjhhhhhhhhhhgk</a></li>
-
+                                <li><a href="#" onClick={() => setStates('helmet')}>Fire Helmet</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_extingusher')}>Fire Extingusher</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_alarm')}>Fire Alarm</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_spinkler')}>Sprinkler System</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_suppression')}>Suppression System</a></li>
                             </ul>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" aria-disabled="true" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('SERVICES')}>SERVICES</a>
+                        <a className="nav-link" aria-disabled="true" style={{ color: section === 'SERVICES' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('SERVICES')}>SERVICES</a>
                        
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('CERTIFICATION')}>CERTIFICATION</a>
+                        <a className="nav-link" href="#" style={{ color: section === 'CERTIFICATION' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('CERTIFICATION')}>CERTIFICATION</a>
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" onClick={() => setSection('CONTACT')} style={{ color: 'white', marginRight: '40px' }}>CONTACT US</a>
+                        <a className="nav-link" href="#" onClick={() => setSection('CONTACT')} style={{ color: section === 'CONTACT' ? '#CC0335' : 'white', marginRight: '40px' }}>CONTACT US</a>
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>
+                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>
                        
                     </li>
                 </ul>
-
-
             </div>
+
             <div> <a
                 href="https://api.whatsapp.com/send?phone=9356548301"
                 className="whatsapp-icon"
@@ -202,10 +213,9 @@ function Home() {
                 <About />}
 
             {section === "PRODUCTS" &&
-                <Product />}
-
-            {section === "SERVICES" &&
-                <Services />}
+                <Product
+                    productName={productName}
+                />}
 
 
 
