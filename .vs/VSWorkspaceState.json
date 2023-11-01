@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\images",
     "\\src",
     "\\src\\Component",
     "\\src\\Component\\Home"
   ],
-  "SelectedNode": "\\src\\Component\\Home\\Home.jsx",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\public",
+  "PreviewInSolutionExplorer": true
 }
