@@ -85,9 +85,11 @@ const ContactForm = () => {
             </div>
 
             <div className='col-12 row p-3'>
-                <div className='col-6 row p-4'>
+                <div className='col-md-6 row p-4'>
                     <div className='col-12'>
-                        <h1 className='color'>KEEP IN TOUCH</h1><br /><br></br>
+                        <h1 className='color'>KEEP IN TOUCH</h1> <br /> <hr className="line" /><br />
+                        
+                      
                     </div>
 
                     <div class="col-md-6">
@@ -125,7 +127,7 @@ const ContactForm = () => {
                         <button className="btn btn-primary">SUBMIT</button>
                     </div>
                 </div>
-                <div className='col-6'>
+                <div className='col-md-6'>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120637.9498959013!2d74.66027078853226!3d19.110466280604875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb05d46788921%3A0x6677e92c1a5181b6!2sAhmednagar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1698549667702!5m2!1sen!2sin"
                         className='mt-4' style={{ border: "0" }} width="600" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>

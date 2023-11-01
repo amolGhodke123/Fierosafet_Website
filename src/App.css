@@ -1,17 +1,43 @@
 @import '~font-awesome/css/font-awesome.min.css';
 
 .custom-footer-bg {
-    background-color: #F51A06; /* background color */
+    background-color: #CC0335; /* background color */
     height: 7vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .custom-footer-bg {
+        height: 5vh; /* Adjust the height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-footer-bg {
+        height: 3vh; /* Adjust the height for even smaller screens */
+    }
 }
 
 .custom-footer-bg1 {
     background-color: #FFFFFF; /* background color */
     height: 15vh;
-
 }
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .custom-footer-bg1 {
+        height: 10vh; /* Adjust the height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-footer-bg1 {
+        height: 7vh; /* Adjust the height for even smaller screens */
+    }
+}
+
 .custom-footer-bg2 {
     background-color: #9C9CA6; /* background color */
     height: 8vh;
@@ -31,10 +57,16 @@
     /*margin-left: 3vw;
 }*/
 .compressed-image {
-    width: 13%; /* Limit the maximum width to 100% of its parent container */
+    width: 15%; /* Limit the maximum width to 100% of its parent container */
     height: auto; /* Maintain the aspect ratio */
     max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
     margin-left: 3vw; /* Adjust the left margin as needed */
+    
+}
+.compressed-image1 {
+    width: 70%; /* Limit the maximum width to 100% of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%; /* Set width to auto so that it adjusts proportionally with the height */
     
 }
 
@@ -48,23 +80,33 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
-    float: right;
-    margin-right: 8vw;
+    height: 100%;
+    flex-wrap: wrap;
 }
     .centered-content a,
     .centered-content i.fa {
         color: white; /* Color for links and icons */
         text-decoration: none;
-        
+        font-size: 15px;
         transition: color 0.3s; /* Smooth transition for color change */
     }
         .centered-content a:hover {
-            color: #ffcc00; /* Change color on hover */
+            color: cyan; /* Change color on hover */
         }
 /* Media query for responsiveness */
+
 @media (max-width: 768px) {
     .centered-content {
-        flex-direction: column;
+        justify-content: center; /* Center items horizontally when wrapping */
+    }
+    .custom-footer-bg .centered-content a {
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-footer-bg .centered-content a {
+        font-size: 10px; /* Further reduce font size for even smaller screens */
     }
 }
 .custom-footer-bg2 .nav-item .nav-link {
@@ -77,7 +119,7 @@
 }
 
     .custom-footer-bg2 .nav-item .nav-link:hover {
-        color: #FA4300 !important; /* Change color on hover */
+        color: #CC0335 !important; /* Change color on hover */
     }
 
 
@@ -107,7 +149,7 @@
     .wrapper .tooltip {
         position: absolute;
         top: 0;
-        font-size: 14px;
+        font-size: 11px;
         background: #ffffff;
         color: #ffffff;
         padding: 5px 8px;
@@ -183,7 +225,22 @@
         background: #CD201F;
         color: #ffffff;
     }
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .wrapper .icon {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 5px; /* Reduce margin for smaller screens */
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+}
 
+@media (max-width: 480px) {
+    .wrapper .icon {
+        padding: 8px; /* Further reduce padding for even smaller screens */
+        margin: 3px; /* Further reduce margin for even smaller screens */
+        font-size: 14px; /* Further reduce font size for even smaller screens */
+    }
+}
 .image-shadow {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Customize the shadow properties here */
 }
@@ -223,8 +280,9 @@
             }
 
             .dropdown-content ul li a:hover {
-                background-color: #ddd;
+                background-color: #9C9CA6;
             }
+
 .float {
     float: left;
 }
@@ -276,10 +334,138 @@ element.style {
     animation-delay: 0.2s;
     animation-name: fadeInRight;
 }
-
 .color {
-    color: purple;
+    color: #183650;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
+
 }
+.color1 {
+    color: #000000;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
+}
+.color2 {
+    color: #4E5861;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(24, 54, 80);
+    text-align: left;
+    text-indent: 0px;
+}
+.color3 {
+    color: #4E5861;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+}
+.color4 {
+    color: #852A2A;
+    font-family: "Times New Roman",Times New Roman;
+    font-size: 1.9em;
+    font-weight: 800;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(133, 42, 42);
+    text-align: center;
+    text-indent: 0px;
+    margin-top: 0px;
+    white-space: nowrap;
+}
+.color5 {
+    color: #9C9CA6;
+    font-family: "Barlow Condensed",sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-stretch: 100%;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+    text-indent: 0px;
+    margin-top: 0px;
+    white-space: nowrap;
+}
+
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .color4 {
+        font-size: 1.3em;
+    }
+
+    .color5 {
+        font-size: 0.5em;
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .color4 {
+        font-size: 1.3em;
+    }
+
+    .color5 {
+        font-size: 0.6em;
+    }
+}
+
 
 .align {
     align-items: center;
@@ -292,8 +478,16 @@ element.style {
     color: #BFCBD1; /* background color */
     position: relative;
     z-index: 1; /* higher z-index value */
-    height: 350px;
+    height: 60vh;
     margin-left: 25px;
+}
+@media (max-width: 768px) {
+    .custom-footer {
+        height: auto;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
 }
 
 .custom-footer-bg3 {
@@ -321,5 +515,28 @@ element.style {
     display: table;
     clear: both;
 }
+.line {
+    width: 10%; /* Set the width of the line to 20% of its parent container */
+    border: 0.2vw solid #990022; /* Set the border width using viewport units and a darker red color */
+}
 
 
+/* YourComponentStyles.css */
+
+.custom-hr {
+    border: none;
+    height: 3px;
+    background-color: #FFFFE6; /* Line color */
+     /* Margin above and below the line */
+    width: 100%; /* Full width of the container */
+
+}
+
+    .custom-hr::before {
+        content: ""; /* Empty content before the hr element */
+        display: inline-block;
+        width: 50px; /* Width of the decorative element */
+        height: 1px; /* Height of the decorative element */
+        background-color: #FFFFE6; /* Color of the decorative element */
+        margin-right: 10px; /* Margin between the decorative element and the line */
+    }

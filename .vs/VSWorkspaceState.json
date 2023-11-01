@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
+    "\\public\\images",
     "\\src",
     "\\src\\Component",
     "\\src\\Component\\Home"
   ],
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\public\\images\\slider1.jpg",
+  "PreviewInSolutionExplorer": true
 }
