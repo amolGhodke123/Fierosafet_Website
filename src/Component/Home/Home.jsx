@@ -4,6 +4,7 @@ import ContactForm from './ContactForm';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
 import About from './About';
+import Product from './Product';
 
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -195,7 +196,13 @@ function Home() {
                 <ContactForm />}
 
             {section === "ABOUT" &&
-                <About/>}
+                <About />}
+
+            {section === "PRODUCTS" &&
+                <Product/>}
+
+
+
 
       
 
