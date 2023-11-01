@@ -7,7 +7,11 @@ import ContactForm from './ContactForm';
 function Home() {
     const [contact, setContact] = useState(false);
     const [home, setHome] = useState(true);
+    const [helmetOn, setHelmetOn] = useState(false);
 
+    function helmet(){
+        setHelmetOn(true);
+    }
     return (
         <>
            
@@ -74,9 +78,9 @@ function Home() {
                         <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-content">
                             <ul>
-                                <li><a href="#">fire helmet</a></li>
+                                <li><a href=""><span onClick={helmet}>Fire Helmet</span></a></li>
                                 <li><a href="#">Dropdown Item Y</a></li>
-                                <li><a href="#">Dropdown Item Zjhhhhhhhhhhgk</a></li>
+                                <li><a href="#">Dropdown Item </a></li>
 
                             </ul>
                         </div>
@@ -94,22 +98,19 @@ function Home() {
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }}>BROCHURE</a>
+                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: 'white', marginRight: '40px' }}>BROCHURE</a>
                        
                     </li>
                 </ul>
-
-
             </div>
 
 
 
 
-                    <div>
+                <div>
                 {contact ? <ContactForm /> :
                 <>
-                    { home &&
-
+                    {home &&  
                     <div id="carouselExampleCaptions" class="carousel slide">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -148,9 +149,7 @@ function Home() {
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                        }
-
-
+                    }
 
                     <div className="col-12 row">
                         <div className="col-8 row p-4">
@@ -161,15 +160,31 @@ function Home() {
                         <div className="col-4 p-4">
                             <img src="/brochure front page new.jpg" alt="" className="compressed-image1" />
                         </div>
-                        </div>
-
+                    </div>
                     </>
-}
-
-            </div>
+}</div>
 
 
-                    <div className="custom-footer-bg3" >
+
+            {/*Product section*/}
+
+            {helmet &&
+                <div className="col-md-12 row p-3">
+                    <div className="col-md-6">
+                        <img style={{height:"300px", width:"500px", marginLeft:"20px"}} src="/images/slider1.jpg" />
+                    </div>
+                    <div className="col-md-6">
+                        <h1>FIRE PROTECTION SYSTEM</h1>
+                        <h3>(DRY & WET RISER SYSTEM) INSTALLATION, COMMISSIONING & TESTING</h3>
+                        <p style={{ textAlign: "justify" }} >
+                            As part of services, SHIELDON Fire & Safety Pvt. Ltd. provide the installation of new & maintenance of existing fire protection systems such as Dry & Wet Riser System. Our staff of designers designs fire protection systems that are specific to your facility, that will detect and respond to fire conditions to ensure the safety of your occupants and reduce the damage to your facility. Providing you with peace of mind, knowing that your facilities, and the people who live, work and play in them are safe from the ravages of fire.
+                         </p>
+                    </div>
+                </div>    
+            }
+    
+
+            <div className="custom-footer-bg3" >
                 <div className="custom-footer p-3">
                     <div className="contact-info">
                         <h5>Contact Info</h5>
