@@ -1,12 +1,36 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
+import About from './About';
+import Product from './Product';
+import Services from './Services';
+
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Home() {
     const [contact, setContact] = useState(false);
     const [home, setHome] = useState(true);
+    const [section, setSection] = useState('HOME'); // Default section is 'home'
+    const [productName, setProductName] = useState('helmet');
+
+
+
+    //useEffect(() => {
+    //    // Initialize the carousel when the component mounts
+    //    const carousel = new window.bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+    //        interval: 2000, // Set the interval for automatic sliding (in milliseconds)
+    //        wrap: true, // Enable carousel wrap (circular sliding)
+    //    });
+    //}, []);
+
+
+    const setStates = (product) => {
+        setProductName(product);
+        setSection('PRODUCTS');
+    }
 
     return (
         <>
@@ -29,7 +53,9 @@ function Home() {
                     </div>
                    
                 </div>
-             {/*   <img src="/2.png" alt="" style={{marginLeft:'6vh'} } />*/}
+                <img src="/2.png" alt="" className="responsive-image" style={{ marginLeft: '15vh' }} />
+                
+                <img src="/4.png" alt="" className="responsive-image" style={{ marginLeft: '5vh' }} />
               
                 <div style={{ position: 'absolute', top: 70, right: 20 }}>
                     <ul className="wrapper">
@@ -60,55 +86,70 @@ function Home() {
                     </ul></div>
 
             </div>
+
             <div className="custom-footer-bg2">
                 <ul className="nav" >
-                    <li className="nav-item dropdown">
-                        <a className="nav-link active" style={{ color: 'white', marginRight:'40px' }} aria-current="page" href="#">HOME</a>
+                    {/*<li className="`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>">*/}
+                        <li className={`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>
+
+                        <a className="nav-link active" style={{ color: section === 'HOME' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('HOME')} aria-current="page" href="#">HOME</a>
+                       
+                    </li>
+                    <li className="nav-item dropdown active">
+                        <a className="nav-link custom-text-color" style={{ color: section === 'ABOUT' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('ABOUT')}>ABOUT US</a>
                        
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link custom-text-color" style={{ color: 'white', marginRight: '40px' }}>ABOUT US</a>
-                       
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
+                        <a className="nav-link active" href="#" style={{ color: section === 'PRODUCTS' ? '#CC0335' : 'white', marginRight: '40px' }}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
                         <div class="dropdown-content">
                             <ul>
-                                <li><a href="#">fire helmet</a></li>
-                                <li><a href="#">Dropdown Item Y</a></li>
-                                <li><a href="#">Dropdown Item Zjhhhhhhhhhhgk</a></li>
-
+                                <li><a href="#" onClick={() => setStates('helmet')}>Fire Helmet</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_extingusher')}>Fire Extingusher</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_alarm')}>Fire Alarm</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_spinkler')}>Sprinkler System</a></li>
+                                <li><a href="#" onClick={() => setStates('fire_suppression')}>Suppression System</a></li>
                             </ul>
                         </div>
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" aria-disabled="true" style={{ color: 'white', marginRight: '40px' }}>SERVICES</a>
+                        <a className="nav-link" aria-disabled="true" style={{ color: section === 'SERVICES' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('SERVICES')}>SERVICES</a>
                        
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }}>CERTIFICATION</a>
+                        <a className="nav-link" href="#" style={{ color: section === 'CERTIFICATION' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('CERTIFICATION')}>CERTIFICATION</a>
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" onClick={() => setContact(true)} style={{ color: 'white', marginRight: '40px' }}>CONTACT US</a>
+                        <a className="nav-link" href="#" onClick={() => setSection('CONTACT')} style={{ color: section === 'CONTACT' ? '#CC0335' : 'white', marginRight: '40px' }}>CONTACT US</a>
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: 'white', marginRight: '40px' }}>BROCHURE</a>
+                      {/*  <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>*/}
+                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')} target="_blank" rel="noopener noreferrer">
+                            BROUCHURE
+                        </a>
                        
                     </li>
                 </ul>
-
-
             </div>
 
+            <div> <a
+                href="https://api.whatsapp.com/send?phone=9356548301"
+                className="whatsapp-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa fa-whatsapp"></i>
+            </a></div>
 
 
 
-                    <div>
-                {contact ? <ContactForm /> :
-                <>
-                    { home &&
+
+            
+              
+              
+                {section === "HOME" &&
+                        <>
 
                     <div id="carouselExampleCaptions" class="carousel slide">
                         <div class="carousel-indicators">
@@ -118,24 +159,26 @@ function Home() {
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/images/slider3.jpg" class="d-block w-100" alt="..." />
+                                <img src="/images/slider3.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>First slide label</h5>
-                                    <p>Some representative placeholder content for the first slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }} >Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire Extinguishers</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slider1.jpg" class="d-block w-100" alt="..." />
+                                <img src="/images/slider1.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Second slide label</h5>
-                                    <p>Some representative placeholder content for the second slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire and safety Equipments</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slider2.jpg" class="d-block w-100" alt="..." />
+                                <img src="/images/slider2.jpg" class="d-block w-100" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Third slide label</h5>
-                                    <p>Some representative placeholder content for the third slide.</p>
+                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
+                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire protective system</h5>
                                 </div>
                             </div>
                         </div>
@@ -148,25 +191,41 @@ function Home() {
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                        }
+                        
 
 
 
-                    <div className="col-12 row">
-                        <div className="col-8 row p-4">
-                            <h2 className='color1'>WE ARE FIERO SAFETY PVT.LTD.</h2> <hr  />
-                            <p className="color2">SHIELDON Fire & Safety Pvt. Ltd. is a fire protection company that delivers quality fire protection systems and safety solutions under one roof. We protect lives and property while providing an exceptional value to our customers. we strive to become a full-service, world class fire protection organization.
+                    <div className="col-12 row p-4">
+                        <div className="col-7 row ">
+                                <h2 className='color1' style={{ marginBottom: '0px' }}>WE ARE FIERO SAFETY PVT.LTD.</h2> 
+                                <hr className="custom-hr" style={{ backgroundColor: 'red'} } />
+                                <p className="color2" >SHIELDON Fire & Safety Pvt. Ltd. is a fire protection company that delivers quality fire protection systems and safety solutions under one roof. We protect lives and property while providing an exceptional value to our customers. we strive to become a full-service, world class fire protection organization.
                                 We have experience with the commercial, industrial or residential marketplaces. At SHIELDON Fire & Safety Pvt. Ltd., we provide a host of fire protection services and fire safety consultancy for all types of buildings to provide your needs as a full service fire protection company.</p>
-                        </div>
-                        <div className="col-4 p-4">
+                            </div>
+                            <div className="col-5" style={{ marginLeft:'3vh' }}>
                             <img src="/brochure front page new.jpg" alt="" className="compressed-image1" />
                         </div>
                         </div>
 
-                    </>
-}
+                </>}
 
-            </div>
+            {section === "CONTACT" &&
+                <ContactForm />}
+
+            {section === "ABOUT" &&
+                <About />}
+
+            {section === "PRODUCTS" &&
+                <Product
+                    productName={productName}
+                />}
+            {section === "SERVICES" &&
+                <Services/>}
+
+
+
+
+      
 
 
                     <div className="custom-footer-bg3" >
@@ -194,12 +253,14 @@ function Home() {
                     <div className="contact-info">
                         <h5>Useful Links</h5>
                         <hr className="custom-hr" />
-                                <p><i class="fa fa-solid fa-bars"></i>Home</p>
-                                <p>About Us</p>
-                        <p>Contact</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> Home<i class="fa fa-solid fa-caret-right" style={{ marginLeft:'24vh' }}></i> Certification</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> About Us<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '20vh' }}></i> Contact Us</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> Products<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '21vh' }}></i> Broucher</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> Services</p>
                        
 
                     </div>
+
                     <div className="clearfix"></div>
                     <hr className="custom-hr" />
 
