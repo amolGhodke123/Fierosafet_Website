@@ -216,6 +216,8 @@ function Home() {
                 <Product
                     productName={productName}
                 />}
+            {section === "SERVICES" &&
+                <Services/>}
 
 
 
