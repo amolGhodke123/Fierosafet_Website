@@ -124,7 +124,10 @@ function Home() {
                         
                     </li>
                     <li className="nav-item dropdown">
-                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>
+                      {/*  <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>*/}
+                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')} target="_blank" rel="noopener noreferrer">
+                            BROUCHURE
+                        </a>
                        
                     </li>
                 </ul>
