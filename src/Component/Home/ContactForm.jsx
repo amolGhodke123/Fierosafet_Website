@@ -1,12 +1,16 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Alert from './Alert';
 
 //import ContactForm from './Contact/ContactForm'
 const ContactForm = () => {
 
+    const [alertMessage, setAlertMessage] = useState("");
 
+    const showAlert = () => {
+        setAlertMessage("This is an alert message!");
+    };
     return (
-        <>
+        <> 
             <img src="/images/breadcrumb.jpg" className="compressed-image2" alt="" />
             <div className="carousel-caption d-none d-md-block">
             <h5 className="colorAbout"> Contact Us</h5>
@@ -162,7 +166,7 @@ const ContactForm = () => {
                     </div>
 
                     <div className="container">
-                        <button className="btn btn-primary">SUBMIT</button>
+                        <button className="btn btn-primary" onClick={showAlert}>SUBMIT</button>
                     </div>
                 </div>
                 <div className='col-md-6'>
@@ -170,6 +174,10 @@ const ContactForm = () => {
                         className='mt-4' style={{ border: "0" }} width="600" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+            {/*<div>
+                {alertMessage && <Alert message={alertMessage} />}
+            </div>*/}
+
         </>
     )
 
