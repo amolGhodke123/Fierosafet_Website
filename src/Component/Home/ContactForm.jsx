@@ -1,12 +1,22 @@
 import React from 'react';
-
+import ContactForm1 from './data.jsx'
 
 //import ContactForm from './Contact/ContactForm'
 const ContactForm = () => {
 
+    const [callContact, setCallContact] = React.useState(false);
+
+
+    const openForm = () => {
+        setCallContact(true);
+    }
 
     return (
         <>
+            {callContact &&
+                <ContactForm1/>
+            }
+
             <img src="/images/breadcrumb.jpg" className="compressed-image2" alt="" />
             <div className="carousel-caption d-none d-md-block">
             <h5 className="colorAbout"> Contact Us</h5>
@@ -163,6 +173,9 @@ const ContactForm = () => {
 
                     <div className="container">
                         <button className="btn btn-primary">SUBMIT</button>
+                    </div>
+                    <div className="container">
+                        <button className="btn btn-primary" onClick={()=>openForm() }>Open Form</button>
                     </div>
                 </div>
                 <div className='col-md-6'>

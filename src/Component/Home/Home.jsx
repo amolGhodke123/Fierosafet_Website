@@ -38,7 +38,7 @@ function Home() {
                 <div className="custom-footer-bg">
                 <div className="centered-content p-2">
                     <div className="color3">
-                        <marquee width="3000">
+                        <marquee width="800" behavior="alternate">
                     <a href="tel:8888401513"> <i className="fa fa-phone"></i> 8888401513 /</a>
                     <a href="tel:7588489516"> 7588489516 | </a>
                             <a href="mailto:fierosafety@gmail.com">
@@ -48,7 +48,7 @@ function Home() {
                 </div>
             </div>
             <div className="custom-footer-bg1 mb-4" style={{ display: 'flex', alignItems: 'center' }}>
-                <img src="/finalfs.png" alt="" className="compressed-image" />
+                <img src="/finalfs.png" alt="" className="compressed-image" />  
                 <div className="color4">
                     FIERO SAFETY SERVICES PVT.LTD.
                     <div className="color5">
