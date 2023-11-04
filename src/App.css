@@ -43,10 +43,10 @@
     height: 8vh;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /*align-items: center;*/
     text-align: center; /* Align text in the center */
     color: white;
-    display: flex;
+  
 
 }
 
@@ -121,6 +121,8 @@
     margin-right: 40px;
     text-decoration: none;
     transition: color 0.2s ease; /* Add transition for smooth color change */
+    color:white;
+
 }
 
     .custom-footer-bg2 .nav-item .nav-link:hover {

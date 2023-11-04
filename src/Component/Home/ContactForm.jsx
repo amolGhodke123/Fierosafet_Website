@@ -44,8 +44,8 @@ const ContactForm = () => {
 
                             </ul>
                             <div style={{ float: 'right', padding: '2vh' }}>
-                                <p>04, Panchashil Apartment, Sector 1,</p><p> CBD Belapur,
-                                    Navi Mumbai,</p><p> Maharashtra 400614</p>
+                                <p>04, Panchashil Apartment, Sector 239,</p><p> CBD RAJAPUR,
+                                    Nashik,</p><p> Maharashtra 400614</p>
                               
                             </div>
                         </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
                                     </p>
                                 <p>
                                  
-                                    +91 85915 26640
+                                    +91 80915 26640
                                 </p>
                             </div>
                         </div>

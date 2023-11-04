@@ -38,9 +38,9 @@ function Home() {
                 <div className="custom-footer-bg">
                 <div className="centered-content p-2">
                 <div className="color3">
-                    <a href="tel:8888401513"> <i className="fa fa-phone"></i> 8888401513 /</a>
-                    <a href="tel:7588489516"> 7588489516 | </a>
-                    <a href="mailto:fierosafety@gmail.com"> <i className="fa fa-envelope"></i> fierosafety@gmail.com </a>
+                    <a href="tel:8888401513"> <i className="fa fa-phone"></i> 88884015132/</a>
+                    <a href="tel:7588489516"> 75884893516 | </a>
+                    <a href="mailto:fierosafety@gmail.com"> <i className="fa fa-envelope"></i> fierosafetyat@gmail.com </a>
                     </div>
                 </div>
             </div>
@@ -88,50 +88,50 @@ function Home() {
             </div>
 
             <div className="custom-footer-bg2">
-                <ul className="nav" >
-                    {/*<li className="`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>">*/}
-                        <li className={`nav-item dropdown ${section === 'HOME' ? 'active-tab' : ''}`}>
-
-                        <a className="nav-link active" style={{ color: section === 'HOME' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('HOME')} aria-current="page" href="#">HOME</a>
-                       
-                    </li>
-                    <li className="nav-item dropdown active">
-                        <a className="nav-link custom-text-color" style={{ color: section === 'ABOUT' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('ABOUT')}>ABOUT US</a>
-                       
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link active" href="#" style={{ color: section === 'PRODUCTS' ? '#CC0335' : 'white', marginRight: '40px' }}>PRODUCTS <i class="fa fa-solid fa-caret-down"></i></a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a href="#" onClick={() => setStates('helmet')}>Fire Helmet</a></li>
-                                <li><a href="#" onClick={() => setStates('fire_extingusher')}>Fire Extingusher</a></li>
-                                <li><a href="#" onClick={() => setStates('fire_alarm')}>Fire Alarm</a></li>
-                                <li><a href="#" onClick={() => setStates('fire_spinkler')}>Sprinkler System</a></li>
-                                <li><a href="#" onClick={() => setStates('fire_suppression')}>Suppression System</a></li>
+                <nav className="navbar navbar-expand-lg ">
+                    <div className="container">
+                        
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav ml-auto">
+                                <li className={`nav-item ${section === 'HOME' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="#" onClick={() => setSection('HOME')}>HOME</a>
+                                </li>
+                                <li className={`nav-item ${section === 'ABOUT' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="#" onClick={() => setSection('ABOUT')}>ABOUT US</a>
+                                </li>
+                                <li className={`nav-item dropdown ${section === 'PRODUCTS' ? 'active' : ''}`}>
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setSection('PRODUCTS')}>
+                                        PRODUCTS
+                                    </a>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a className="dropdown-item" href="#" onClick={() => setStates('helmet')}>Fire Helmet</a></li>
+                                        <li><a className="dropdown-item" href="#" onClick={() => setStates('fire_extingusher')}>Fire Extinguisher</a></li>
+                                        <li><a className="dropdown-item" href="#" onClick={() => setStates('fire_alarm')}>Fire Alarm</a></li>
+                                        <li><a className="dropdown-item" href="#" onClick={() => setStates('fire_spinkler')}>Sprinkler System</a></li>
+                                        <li><a className="dropdown-item" href="#" onClick={() => setStates('fire_suppression')}>Suppression System</a></li>
+                                        {/* Add other product items as needed */}
+                                    </ul>
+                                </li>
+                                <li className={`nav-item ${section === 'SERVICES' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="#" onClick={() => setSection('SERVICES')}>SERVICES</a>
+                                </li>
+                                <li className={`nav-item ${section === 'CERTIFICATION' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="#" onClick={() => setSection('CERTIFICATION')}>CERTIFICATION</a>
+                                </li>
+                                <li className={`nav-item ${section === 'CONTACT' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="#" onClick={() => setSection('CONTACT')}>CONTACT US</a>
+                                </li>
+                                <li className={`nav-item ${section === 'BROCHURE' ? 'active' : ''}`}>
+                                    <a className="nav-link" href="/images/Fierosafety Business Details.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setSection('BROCHURE')}>BROCHURE</a>
+                                </li>
                             </ul>
                         </div>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" aria-disabled="true" style={{ color: section === 'SERVICES' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('SERVICES')}>SERVICES</a>
-                       
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" style={{ color: section === 'CERTIFICATION' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('CERTIFICATION')}>CERTIFICATION</a>
-                        
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" onClick={() => setSection('CONTACT')} style={{ color: section === 'CONTACT' ? '#CC0335' : 'white', marginRight: '40px' }}>CONTACT US</a>
-                        
-                    </li>
-                    <li className="nav-item dropdown">
-                      {/*  <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')}>BROCHURE</a>*/}
-                        <a className="nav-link" href="/images/Fierosafety Business Details.pdf" style={{ color: section === 'BROCHURE' ? '#CC0335' : 'white', marginRight: '40px' }} onClick={() => setSection('BROCHURE')} target="_blank" rel="noopener noreferrer">
-                            BROUCHURE
-                        </a>
-                       
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                </nav>
+</div>
 
             <div> <a
                 href="https://api.whatsapp.com/send?phone=9356548301"
@@ -159,7 +159,7 @@ function Home() {
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/images/slider3.jpg" class="d-block w-100" alt="" />
+                                <img src="/images/slider3.jpg" className="d-block w-100 img-fluid" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
                                 <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }} >Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
 
@@ -167,7 +167,7 @@ function Home() {
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slider1.jpg" class="d-block w-100" alt="" />
+                            <img src="/images/slider1.jpg" class="d-block w-100 img-fluid" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
                                 <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
 
@@ -175,7 +175,7 @@ function Home() {
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/slider2.jpg" class="d-block w-100" alt="" />
+                            <img src="/images/slider2.jpg" class="d-block w-100 img-fluid" alt="" />
                                 <div class="carousel-caption d-none d-md-block">
                                 <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
                                 <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire protective system</h5>
@@ -237,25 +237,25 @@ function Home() {
                                     
                                     <i className="fa fas fa-home" style={{ marginRight: '10px' }}></i>
                                     
-                                    Vidya Vasant Park, Front of Vasantrao Naik B.Ed. College, Kalamba, Kolhapur - 416007
+                                    Vidya Vasant Park, Front of New Law College, Kalamba, Nashik - 416007
 
                         </p>
                                 <p>
                                     
                                     <i className="fa fa-phone" style={{ marginRight: '10px' }}></i>
-                                    7588489516/8888401513
+                                    75884899516/88889401513
                         </p>
                         <p style={{ marginBottom: '25px' }}>
                                     <i className="fa fa-envelope" style={{ marginRight: '10px' }}></i>
-                                    fierosafety@gmail.com
+                                    fierosafetyat@gmail.com
                         </p>
                     </div>
                     <div className="contact-info">
                         <h5>Useful Links</h5>
                         <hr className="custom-hr" />
-                        <p><i class="fa fa-solid fa-caret-right"></i> Home<i class="fa fa-solid fa-caret-right" style={{ marginLeft:'24vh' }}></i> Certification</p>
-                        <p><i class="fa fa-solid fa-caret-right"></i> About Us<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '20vh' }}></i> Contact Us</p>
-                        <p><i class="fa fa-solid fa-caret-right"></i> Products<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '21vh' }}></i> Broucher</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> Home<i class="fa fa-solid fa-caret-right" style={{ marginLeft:'10vw' }}></i> Certification</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> About Us<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '8vw' }}></i> Contact Us</p>
+                        <p><i class="fa fa-solid fa-caret-right"></i> Products<i class="fa fa-solid fa-caret-right" style={{ marginLeft: '8vw' }}></i> Broucher</p>
                         <p><i class="fa fa-solid fa-caret-right"></i> Services</p>
                        
 
@@ -266,7 +266,7 @@ function Home() {
 
 
                     <div className="copyright-notice">
-                        Copyright @2023 All Rights Reserved | By Software Development Cell, New Arts,Commerce and Science College,Ahmednagar
+                        Copyright @2023 All Rights Reserved | By Software Development Cell,Ahmednagar
 
                     </div>
                     <div style={{ textAlign: 'center', color: 'black' }}>

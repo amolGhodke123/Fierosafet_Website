@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\images",
     "\\src",
     "\\src\\Component",
     "\\src\\Component\\Home"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\Component\\Home\\Product.jsx",
   "PreviewInSolutionExplorer": true
 }
