@@ -7,6 +7,13 @@ const ContactForm = () => {
 
     return (
         <>
+            <img src="/images/breadcrumb.jpg" className="compressed-image2" alt="" />
+            <div className="carousel-caption d-none d-md-block">
+            <h5 className="colorAbout"> Contact Us</h5>
+
+            <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Home > Contact Us</h5>
+        </div>
+
             <div className='col-md-12 m-4'>
                 <span className="para" style={{ textAlign: "justify" }}>
                     We look forward to the opportunity to assist you with any of your fire protection & safety needs. As your fire protection & safety contractor, we will collaborate and work with you to find solutions to your specific applications. Please feel free to contact us about your residential, industrial or commercial fire protection & safety needs. We will provide a no-obligation consultation, survey or solution.
@@ -25,15 +32,22 @@ const ContactForm = () => {
                             animationDuration: "1s",
                             animationName: "fadeInRight"
                         }}
-                    >
-                        <div className="icon-wrapper">
-                            <i className="fa fas fa-home"></i>
-                        </div>
-                        <div className="info-txt">
-                            <p>
-                                04, Panchashil Apartment, Sector 1, CBD Belapur, <br />
-                                Navi Mumbai, Maharashtra 400614
-                            </p>
+                    > <div style={{ color: 'black' }}>
+                            <ul className="wrapper">
+                                <li className="icon facebook">
+                                    <span className="tooltip">Address</span>
+                                    <span><i class="fa far fa-home"></i></span>
+
+
+                                </li>
+
+
+                            </ul>
+                            <div style={{ float: 'right', padding: '2vh' }}>
+                                <p>04, Panchashil Apartment, Sector 1,</p><p> CBD Belapur,
+                                    Navi Mumbai,</p><p> Maharashtra 400614</p>
+                              
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -49,12 +63,26 @@ const ContactForm = () => {
                             animationName: "fadeInRight"
                         }}
                     >
-                        <div className="icon-wrapper">
-                            <i className="fa fas fa-phone"></i>
-                        </div>
-                        <div className="info-txt">
-                            <p>Call Now</p>
-                            <p>+91 85915 26640</p>
+                        <div style={{ color: 'black' }}>
+                            <ul className="wrapper">
+                                <li className="icon facebook">
+                                    <span className="tooltip">Call</span>
+                                    <span><i class="fa fas fa-phone"></i></span>
+
+
+                                </li>
+
+
+                            </ul>
+                            <div style={{ float: 'right', padding: '2vh' }}>
+                                <p>Call Now
+
+                                    </p>
+                                <p>
+                                 
+                                    +91 85915 26640
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,16 +98,26 @@ const ContactForm = () => {
                             animationName: "fadeInRight"
                         }}
                     >
-                        <div className="icon-wrapper">
-                            <i className="fa far fa-envelope"></i>
+                        <div style={{ color: 'black' }}>
+                            <ul className="wrapper">
+                                <li className="icon facebook">
+                                    <span className="tooltip">Mail us</span>
+                                    <span><i class="fa far fa-envelope"></i></span>
+
+
+                                </li>
+                               
+
+                            </ul>
+                            <div style={{ float: 'right', padding:'2vh' }}>
+                                <p>Mail Us</p>
+                                <p>
+                                    shieldonindia@gmail.com <br />
+                                    info@shieldonindia.com
+                                </p>
+                            </div>
                         </div>
-                        <div className="info-txt">
-                            <p>Mail Us</p>
-                            <p>
-                                shieldonindia@gmail.com <br />
-                                info@shieldonindia.com
-                            </p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
