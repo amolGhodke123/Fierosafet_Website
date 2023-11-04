@@ -36,10 +36,13 @@ function Home() {
            
                 <div className="custom-footer-bg">
                 <div className="centered-content p-2">
-                <div className="color3">
+                    <div className="color3">
+                        <marquee width="3000">
                     <a href="tel:8888401513"> <i className="fa fa-phone"></i> 8888401513 /</a>
                     <a href="tel:7588489516"> 7588489516 | </a>
-                    <a href="mailto:fierosafety@gmail.com"> <i className="fa fa-envelope"></i> fierosafety@gmail.com </a>
+                            <a href="mailto:fierosafety@gmail.com">
+                            <i className="fa fa-envelope"></i> fierosafety@gmail.com </a>
+                     </marquee>
                     </div>
                 </div>
             </div>
