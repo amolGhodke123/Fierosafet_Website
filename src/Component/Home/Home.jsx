@@ -7,6 +7,11 @@ import About from './About';
 import Product from './Product';
 import Services from './Services';
 
+import { Carousel } from 'react-bootstrap';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -15,14 +20,47 @@ function Home() {
     const [home, setHome] = useState(true);
     const [section, setSection] = useState('HOME'); // Default section is 'home'
     const [productName, setProductName] = useState('helmet');
+    const [isSticky, setSticky] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 50) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    const carouselSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+    };
+
+    const carouselImages = [
+        '/images/slider3.jpg',
+        '/images/slider2.jpg',
+        '/images/slider1.jpg',
+    ];
 
 
     //useEffect(() => {
     //    // Initialize the carousel when the component mounts
     //    const carousel = new window.bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
     //        interval: 2000, // Set the interval for automatic sliding (in milliseconds)
-    //        wrap: true, // Enable carousel wrap (circular sliding)
+    //        wrap: false, // Enable carousel wrap (circular sliding)
     //    });
     //}, []);
 
@@ -31,7 +69,25 @@ function Home() {
         setProductName(product);
         setSection('PRODUCTS');
     }
+  
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 50) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
            
@@ -88,8 +144,8 @@ function Home() {
 
             </div>
 
-            <div className="custom-footer-bg2">
-                <nav className="navbar navbar-expand-lg ">
+            <div className={`custom-footer-bg2 ${isSticky ? 'sticky-navbar' : ''}`}>
+                <nav className="navbar navbar-expand-lg">
                     <div className="container">
                         
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,48 +208,22 @@ function Home() {
                 {section === "HOME" &&
                         <>
 
-                    <div id="carouselExampleCaptions" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/images/slider3.jpg" className="d-block w-100 img-fluid" alt="" />
-                                <div class="carousel-caption d-none d-md-block">
-                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }} >Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
-
-                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire Extinguishers</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                            <img src="/images/slider1.jpg" class="d-block w-100 img-fluid" alt="" />
-                                <div class="carousel-caption d-none d-md-block">
-                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
-
-                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire and safety Equipments</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                            <img src="/images/slider2.jpg" class="d-block w-100 img-fluid" alt="" />
-                                <div class="carousel-caption d-none d-md-block">
-                                <h5 className="colorAbout" style={{ fontSize: '2.5vw', color: '#A70417' }}>Welcome to Fiero Safety Sevices Pvt.Ltd.</h5>
-                                <h5 className="colorAbout" style={{ fontSize: '2vw', fontWeight: '200' }}>Fire protective system</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
                         
-
+                <div className="container">
+                    {/* ... Your other content ... */}
+                    <div className="row">
+                        <div className="col-12">
+                            <Slider {...carouselSettings}>
+                                {carouselImages.map((image, index) => (
+                                    <div key={index}>
+                                        <img src={image} alt={`Slide ${index + 1}`} className="d-block w-100 img-fluid" />
+                                    </div>
+                                ))}
+                            </Slider>
+                        </div>
+                    </div>
+                    {/* ... Rest of your content ... */}
+                </div>
 
 
                     <div className="col-12 row p-4">
@@ -299,7 +329,8 @@ function Home() {
                                 </ul>
                     </div>
                 </div>
-                    </div>
+            </div>
+          
         
             
         </>
