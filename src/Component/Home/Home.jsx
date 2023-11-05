@@ -20,7 +20,25 @@ function Home() {
     const [home, setHome] = useState(true);
     const [section, setSection] = useState('HOME'); // Default section is 'home'
     const [productName, setProductName] = useState('helmet');
+    const [isSticky, setSticky] = useState(false);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 50) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const carouselSettings = {
         dots: true,
         infinite: true,
@@ -51,7 +69,25 @@ function Home() {
         setProductName(product);
         setSection('PRODUCTS');
     }
+  
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            if (offset > 50) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
            
@@ -108,8 +144,8 @@ function Home() {
 
             </div>
 
-            <div className="custom-footer-bg2">
-                <nav className="navbar navbar-expand-lg ">
+            <div className={`custom-footer-bg2 ${isSticky ? 'sticky-navbar' : ''}`}>
+                <nav className="navbar navbar-expand-lg">
                     <div className="container">
                         
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
